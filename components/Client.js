@@ -11,7 +11,8 @@ const Client = ({client}) => {
       <div className={s.cell}>{formatDate(client.dateOpened)}</div>
       <div className={s.cell}>
         <ProgressBar
-          percent={(client.docsReceived/client.docsNeeded) * 100}
+          received={client.docsReceived}
+          needed={client.docsNeeded}
         />
       </div>
       <div className={s.cell}>{client.phone}</div>

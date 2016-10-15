@@ -1,6 +1,12 @@
 .row {
-  display: table-row;
+  composes: row from './common.css';
+}
+.row:nth-child(even) {
+  background: rgba(247,248,251,0.51);
+}
+.row:hover {
+  background: rgba(163,232,255,0.16);
 }
 .cell {
-  display: table-cell;
+  composes: cell from './common.css';
 }

@@ -18,6 +18,7 @@ const Client = ({client}) => {
       <div className={s.cell}>{client.phone}</div>
       <div className={s.cell}>{client.email}</div>
       <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>
+      <div className={s.cell}></div>
     </div>
   )
 }

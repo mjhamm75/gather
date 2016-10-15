@@ -7,7 +7,7 @@ const ClientList = ({clientList}) => {
   let clientDom = clientList.map((client, index) => <Client key={index} client={client}/>);
   return (
     <div className={s.table}>
-      <div className={s.row}>
+      <div className={s.header}>
         <div className={s.cell}>Client</div>
         <div className={s.cell}>Date Opened</div>
         <div className={s.cell}>Document Status</div>

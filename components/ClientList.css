@@ -6,5 +6,9 @@
   display: table-row;
 }
 .cell {
-  display: table-cell;
+  composes: cell from './common.css';
+}
+.header {
+  background: #F7F8FB;
+  composes: row from './common.css';
 }

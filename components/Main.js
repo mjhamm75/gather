@@ -35,11 +35,13 @@ let clientList = [
 ]
 
 class App extends Component {
-  clickBell(client) {
+  clickBell(client, event) {
+    event.stopPropagation();
     console.log(`bell ${client.name}`)
   }
 
-  clickDot(client) {
+  clickDot(client, event) {
+    event.stopPropagation();
     console.log(`dot ${client.name}`)
   }
 

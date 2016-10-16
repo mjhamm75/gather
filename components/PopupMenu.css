@@ -5,6 +5,7 @@
 .popupMenuItem {
   composes: popupMenu;
   cursor: pointer;
+  color: #9B9B9B;
 }
 .popupMenuItem:hover g {
   fill: green;

@@ -10,9 +10,6 @@ export default ({clickDot}) => {
       width="6px"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink">
-        <title>options</title>
-        <desc>Created with Sketch.</desc>
-        <defs></defs>
         <g id="Hamm&amp;Hamm" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="Attorney-Dashboard-Success-Message" transform="translate(-1875.000000, -463.000000)" fill="#C3D3DE">
                 <g id="Drawer" transform="translate(1622.000000, 463.000000)">

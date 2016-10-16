@@ -3,8 +3,8 @@ import Client from './Client';
 
 import s from './ClientList.css';
 
-const ClientList = ({clientList}) => {
-  let clientDom = clientList.map((client, index) => <Client key={index} client={client}/>);
+const ClientList = ({clientList, clickBell, clickDot}) => {
+  let clientDom = clientList.map((client, index) => <Client key={index} client={client} clickBell={clickBell} clickDot={clickDot}/>);
   return (
     <div className={s.table}>
       <div className={s.header}>

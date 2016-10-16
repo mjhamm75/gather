@@ -1,8 +1,18 @@
 import React from 'react';
 
-export default ({color = '#4990E2'}) => {
+export default ({
+  clickBell,
+  color = '#4990E2'
+}) => {
   return (
-    <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg
+      height="23px"
+      onClick={clickBell}
+      viewBox="0 0 23 23"
+      version="1.1"
+      width="23px"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink">
         <title>Page 1 Copy 8</title>
         <desc>Created with Sketch.</desc>
         <defs></defs>

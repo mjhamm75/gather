@@ -10,3 +10,7 @@
 .cell {
   composes: cell from './common.css';
 }
+.cellRight {
+  composes: cell;
+  text-align: right;
+}

@@ -1,8 +1,15 @@
 import React from 'react';
 
-export default () => {
+export default ({clickDot}) => {
   return (
-    <svg width="6px" height="24px" viewBox="0 0 6 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg
+      height="24px"
+      onClick={clickDot}
+      version="1.1"
+      viewBox="0 0 6 24"
+      width="6px"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink">
         <title>options</title>
         <desc>Created with Sketch.</desc>
         <defs></defs>

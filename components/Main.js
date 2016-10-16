@@ -35,8 +35,21 @@ let clientList = [
 ]
 
 class App extends Component {
+  clickBell(client) {
+    console.log(`bell ${client.name}`)
+  }
+
+  clickDot(client) {
+    console.log(`dot ${client.name}`)
+  }
   render() {
-    return <ClientList clientList={clientList}/>
+    return (
+      <ClientList
+        clientList={clientList}
+        clickDot={this.clickDot.bind(this)}
+        clickBell={this.clickBell.bind(this)}
+      />
+    )
   }
 }
 

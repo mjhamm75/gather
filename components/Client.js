@@ -7,7 +7,7 @@ import s from './Client.css';
 import Bell from './Bell';
 import DotDotDot from './DotDotDot';
 
-const Client = ({client}) => {
+const Client = ({client, clickBell, clickDot}) => {
   return (
     <div className={s.row}>
       <div className={s.cell}>{client.name}</div>
@@ -22,11 +22,15 @@ const Client = ({client}) => {
       <div className={s.cell}>{client.phone}</div>
       <div className={s.cell}>{client.email}</div>
       <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>
-      <div className={s.cell}>
-        <Bell />
+      <div className={s.cellRight}>
+        <Bell
+          clickBell={clickBell.bind(this, client)}
+        />
       </div>
-      <div className={s.cell}>
-        <DotDotDot />
+      <div className={s.cellRight}>
+        <DotDotDot
+          clickDot={clickDot.bind(this, client)}
+        />
       </div>
     </div>
   )

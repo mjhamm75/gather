@@ -14,3 +14,7 @@
   composes: cell;
   text-align: right;
 }
+.cellRightAlign {
+  composes: cellRight;
+  width: 130px;
+}

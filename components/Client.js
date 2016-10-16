@@ -7,9 +7,14 @@ import s from './Client.css';
 import Bell from './Bell';
 import DotDotDot from './DotDotDot';
 
-const Client = ({client, clickBell, clickDot}) => {
+const Client = ({
+  client,
+  clickBell,
+  clickDot,
+  clickRow
+}) => {
   return (
-    <div className={s.row}>
+    <div className={s.row} onClick={clickRow.bind(this, client)}>
       <div className={s.cell}>{client.name}</div>
       <div className={s.cell}>{formatDate(client.dateOpened)}</div>
       <div className={s.cell}>
@@ -22,7 +27,7 @@ const Client = ({client, clickBell, clickDot}) => {
       <div className={s.cell}>{client.phone}</div>
       <div className={s.cell}>{client.email}</div>
       <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>
-      <div className={s.cellRight}>
+      <div className={s.cellRightAlign}>
         <Bell
           clickBell={clickBell.bind(this, client)}
         />

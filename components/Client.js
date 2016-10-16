@@ -6,6 +6,7 @@ import s from './Client.css';
 
 import Bell from './Bell';
 import DotDotDot from './DotDotDot';
+import PopupMenu from './PopupMenu';
 
 const Client = ({
   client,
@@ -37,6 +38,7 @@ const Client = ({
           clickDot={clickDot.bind(this, client)}
         />
       </div>
+      <PopupMenu />
     </div>
   )
 }

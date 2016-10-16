@@ -1,0 +1,17 @@
+.popupMenu {
+  align-items: center;
+  display: flex;
+}
+.popupMenuItem {
+  composes: popupMenu;
+  cursor: pointer;
+}
+.popupMenuItem:hover g {
+  fill: green;
+}
+.popupMenuItem:hover span {
+  color: green;
+}
+.text {
+  margin: 0 12px 0 4px;
+}

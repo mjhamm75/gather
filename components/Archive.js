@@ -2,9 +2,6 @@ import React from 'react';
 
 export default () => (
   <svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-      <title>archive</title>
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
       <g id="Hamm&amp;Hamm" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g id="Attorney-Dashboard-Success-Message" transform="translate(-1766.000000, -518.000000)" fill="#4990E2">
               <g id="Drawer" transform="translate(1622.000000, 463.000000)">

@@ -4,6 +4,8 @@ import ProgressBar from './ProgressBar';
 
 import s from './Client.css';
 
+import Bell from './Bell';
+
 const Client = ({client}) => {
   return (
     <div className={s.row}>
@@ -15,10 +17,14 @@ const Client = ({client}) => {
           needed={client.docsNeeded}
         />
       </div>
+      <div className={s.cell}>{`${client.docsNeeded} of ${client.docsReceived}`}</div>
       <div className={s.cell}>{client.phone}</div>
       <div className={s.cell}>{client.email}</div>
       <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>
       <div className={s.cell}></div>
+      <div className={s.cell}>
+        <Bell />
+      </div>
     </div>
   )
 }

@@ -6,9 +6,8 @@ const ProgressBar = ({needed, received}) => {
   return (
     <div className={s.flex}>
       <div className={s.progress}>
-        <span className={s.bar} style={{"width": `${percent}%`}}></span>
+        <span className={s.bar} style={{'width': `${percent}%`}}></span>
       </div>
-      <span>{`${needed} of ${received}`}</span>
     </div>
   )
 }

@@ -9,6 +9,7 @@
   composes: cell from './common.css';
 }
 .header {
-  background: #F7F8FB;
   composes: row from './common.css';
+  background: #F7F8FB;
+  color: #9B9B9B;
 }

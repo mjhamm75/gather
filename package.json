@@ -23,6 +23,10 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "style-loader": "^0.13.1",
+    "svg-react-loader": "^0.3.7",
     "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "image-webpack-loader": "^2.0.0"
   }
 }

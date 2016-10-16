@@ -14,8 +14,15 @@ function clickArchive(event) {
   event.stopPropagation();
   console.log('archive');
 }
+
+const popupStyle = {
+  position: 'fixed',
+  right: '24px',
+  transform: 'translateY(-23px)'
+}
+
 export default ({}) => (
-  <div className={s.popupMenu}>
+  <div className={s.popupMenu} style={popupStyle}>
     <div className={s.popupMenuItem} onClick={e => clickEdit(e)}>
       <Edit /><span className={s.text}>Edit</span>
     </div>

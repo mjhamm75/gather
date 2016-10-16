@@ -6,10 +6,9 @@ import s from './ClientList.css';
 const ClientList = ({
   clientList,
   clickBell,
-  clickDot,
   clickRow
 }) => {
-  let clientDom = clientList.map((client, index) => <Client key={index} client={client} clickBell={clickBell} clickDot={clickDot} clickRow={clickRow}/>);
+  let clientDom = clientList.map((client, index) => <Client key={index} client={client} clickBell={clickBell} clickRow={clickRow}/>);
   return (
     <div className={s.table}>
       <div className={s.header}>

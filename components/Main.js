@@ -40,11 +40,6 @@ class App extends Component {
     console.log(`bell ${client.name}`)
   }
 
-  clickDot(client, event) {
-    event.stopPropagation();
-    console.log(`dot ${client.name}`)
-  }
-
   clickRow(client) {
     console.log(`row ${client.name}`)
   }
@@ -52,7 +47,6 @@ class App extends Component {
     return (
       <ClientList
         clientList={clientList}
-        clickDot={this.clickDot.bind(this)}
         clickBell={this.clickBell.bind(this)}
         clickRow={this.clickRow.bind(this)}
       />

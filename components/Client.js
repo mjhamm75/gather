@@ -5,6 +5,7 @@ import ProgressBar from './ProgressBar';
 import s from './Client.css';
 
 import Bell from './Bell';
+import DotDotDot from './DotDotDot';
 
 const Client = ({client}) => {
   return (
@@ -21,9 +22,11 @@ const Client = ({client}) => {
       <div className={s.cell}>{client.phone}</div>
       <div className={s.cell}>{client.email}</div>
       <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>
-      <div className={s.cell}></div>
       <div className={s.cell}>
         <Bell />
+      </div>
+      <div className={s.cell}>
+        <DotDotDot />
       </div>
     </div>
   )

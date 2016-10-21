@@ -8,3 +8,12 @@
   padding: 15px 10px;
   vertical-align: middle;
 }
+.green {
+  background: rgba(77,201,139,0.75);
+}
+.yellow {
+  background: #FBF17B;
+}
+.red {
+  background: #E47F6D;
+}

@@ -1,0 +1,10 @@
+.clientManagement {
+  background: white;
+}
+.tableActionBar {
+  align-items: center;
+  display: flex;
+}
+.tableActionBar > div {
+  flex-basis: 33.33%
+}

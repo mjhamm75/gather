@@ -25,14 +25,14 @@
   position: relative;
 }
 .high {
-  background: rgba(77,201,139,0.75);
+  composes: green from './common.css';
   border: 1px solid #3AA56F;
 }
 .middle {
-  background: #FBF17B;
+  composes: yellow from './common.css';
   border: 1px solid #F5A623;
 }
 .low {
-  background: #E47F6D;
+  composes: red from './common.css';
   border: 1px solid #D0021B;
 }

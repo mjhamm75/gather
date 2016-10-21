@@ -1,4 +1,10 @@
 .reminder {
-  text-align: right;
+  composes: blueText from './common.css';
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
   margin-right: 15px;
+}
+.text {
+  margin-right: 5px;
 }

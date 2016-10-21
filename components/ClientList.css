@@ -1,6 +1,7 @@
 .table {
   display: table;
-  width: 100%;
+  margin: 0 auto;
+  width: 96%;
 }
 .row {
   display: table-row;

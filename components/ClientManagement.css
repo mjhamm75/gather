@@ -1,9 +1,11 @@
 .clientManagement {
   background: white;
-  margin: 0 15px 15px 15px;
+  margin: 0 auto;
+  width: 98%;
 }
 .clientManagementFrame {
   background: #F7F8FB;
+  padding-bottom: 20px;
 }
 .frameBar {
   align-items: center;

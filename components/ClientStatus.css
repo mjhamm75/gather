@@ -1,3 +1,27 @@
 .clientStatus {
-  
+  display: flex;
+  justify-content: center;
+}
+.boxSize {
+  height: 16px;
+  width: 16px;
+}
+.redBox {
+  composes: red from './common.css';
+  composes: boxSize;
+}
+.yellowBox {
+  composes: yellow from './common.css';
+  composes: boxSize;
+}
+.greenBox {
+  composes: green from './common.css';
+  composes: boxSize;
+}
+.box {
+  display: flex;
+}
+.text {
+  margin-left: 5px;
+  margin-right: 20px;
 }

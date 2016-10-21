@@ -2,11 +2,37 @@
   background: white;
   margin: 0 15px 15px 15px;
 }
+.clientManagementFrame {
+  background: #F7F8FB;
+}
+.frameBar {
+  align-items: center;
+  display: flex;
+  margin: 0 15px;
+  padding: 15px 0;
+}
 .tableActionBar {
   align-items: center;
   display: flex;
-  margin: 30px 0;
+  padding: 30px 0;
 }
 .tableActionBar > div {
   flex-basis: 33.33%
+}
+.active {
+  margin-right: 30px;
+}
+.archived {
+  color: #9B9B9B;
+}
+.link {
+  background: #44505E;
+  border: 1px solid #B0BEC9;
+  box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.33);
+  border-radius: 4px;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px 5px;
 }

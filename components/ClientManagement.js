@@ -12,17 +12,24 @@ const ClientManagement = ({
   clickBell,
   clickRow
 }) => (
-  <div className={s.clientManagement}>
-    <div className={s.tableActionBar}>
-      <ClientSearch />
-      <ClientStatus />
-      <SendReminderToAll />
+  <div className={s.clientManagementFrame}>
+    <div className={s.frameBar}>
+      <div className={s.active}>Active (3)</div>
+      <div className={s.archived}>Archived (122)</div>
+      <div className={s.link}>+ Create New Account</div>
     </div>
-    <ClientList
-      clientList={clientList}
-      clickBell={clickBell}
-      clickRow={clickRow}
-    />
+    <div className={s.clientManagement}>
+      <div className={s.tableActionBar}>
+        <ClientSearch />
+        <ClientStatus />
+        <SendReminderToAll />
+      </div>
+      <ClientList
+        clientList={clientList}
+        clickBell={clickBell}
+        clickRow={clickRow}
+        />
+    </div>
   </div>
 )
 

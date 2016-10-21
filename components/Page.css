@@ -1,0 +1,9 @@
+.page {
+  background: black;
+  padding: 0 15px 40px 15px;
+}
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+}

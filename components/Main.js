@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ClientManagement from './ClientManagement';
+import Page from './Page.js';
 
 import s from './Main.css';
 
@@ -45,7 +46,7 @@ class App extends Component {
   }
   render() {
     return (
-      <ClientManagement
+      <Page 
         clientList={clientList}
         clickBell={this.clickBell.bind(this)}
         clickRow={this.clickRow.bind(this)}

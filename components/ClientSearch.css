@@ -1,0 +1,12 @@
+.input {
+  background: url('../images/search.png');
+  background-repeat: no-repeat;
+  background-position-y: 6px;
+  background-position-x: 4px;
+  border: 1px gainsboro solid;
+  border-radius: 4px;
+  height: 28px;
+  padding-left: 25px;
+  font-size: 16px;
+  width: 360px;
+}

@@ -31,10 +31,6 @@ class ClientManagement extends Component {
     )
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    clients: state.clients
-  }
-}
-export default connect(mapStateToProps)(ClientManagement);
+export default connect(state => ({
+  clients: state.clients
+}))(ClientManagement);

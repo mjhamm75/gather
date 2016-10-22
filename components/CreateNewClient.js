@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 import s from './CreateNewClient.css';
 
@@ -9,7 +10,10 @@ class CreateNewClient extends Component {
         <div className={s.border}>
           <div className={s.toolbar}>
             <div className={s.title}>New Account</div>
-            <div className={s.cancel}>Cancel</div>
+            <div
+              className={s.cancel}>
+              <Link to="/">Cancel</Link>
+            </div>
             <div className={s.create}>Create</div>
           </div>
           <div className={s.accountInfo}>

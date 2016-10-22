@@ -3,4 +3,10 @@ import { render } from 'react-dom';
 
 import Main from './components/Main';
 
-render(<Main />, document.getElementById('app'));
+import { Router, Route, browserHistory } from 'react-router';
+
+render((
+  <Router history={browserHistory}>
+    <Router path="/" component={Main}></Router>
+  </Router>
+), document.getElementById('app'));

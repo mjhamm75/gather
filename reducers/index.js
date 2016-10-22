@@ -13,3 +13,7 @@ export const getArchivedCount = (store) => {
 export const getClientCounts = (store) => {
   return fromClients.getClientCounts(store.clients);
 }
+
+export const getActiveClients = (store) => {
+  return fromClients.getActiveClients(store.clients);
+}

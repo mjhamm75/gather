@@ -7,7 +7,11 @@ import ClientSearch from './ClientSearch';
 import ClientStatus from './ClientStatus';
 import SendReminderToAll from './SendReminderToAll';
 
-import { getArchivedCount, getClientCounts } from '../reducers';
+import {
+  getActiveClients,
+  getArchivedCount,
+  getClientCounts
+} from '../reducers';
 
 import s from './ClientManagement.css';
 
@@ -18,6 +22,7 @@ class ClientManagement extends Component {
 
   render() {
     let {
+      activeClients,
       archived,
       clients,
       counts
@@ -44,7 +49,7 @@ class ClientManagement extends Component {
             <SendReminderToAll />
           </div>
           <ClientList
-            clientList={this.props.clients}
+            clientList={activeClients}
             />
         </div>
       </div>
@@ -53,7 +58,8 @@ class ClientManagement extends Component {
 }
 
 export default connect(state => ({
-  clients: state.clients,
+  activeClients: getActiveClients(state),
   archived: getArchivedCount(state),
+  clients: state.clients,
   counts: getClientCounts(state)
 }))(ClientManagement);

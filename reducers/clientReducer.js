@@ -1,4 +1,5 @@
 export const UPDATE_CLIENTS = 'UPDATE_CLIENTS';
+import { complete, starting, inProgress } from '../utils/client.utils';
 
 const initialState = [{
     name: 'Jason Hamm',
@@ -56,11 +57,24 @@ export const getArchivedCount = (clients) => {
   return clients.filter(client => client.archived === true);
 }
 
+export const getActiveClients = (clients) => {
+  return clients.filter(client => client.archived == false);
+}
+
 export const getClientCounts = (clients) => {
   let nonArchived = clients.filter(client => client.archived === false);
   return {
-    complete: nonArchived.filter(client => client.docsNeeded / client.docsReceived === 1).length,
-    starting: nonArchived.filter(client => client.docsNeeded / client.docsReceived >= 40 && client.docsNeeded / client.docsReceived < 100).length,
-    inProgress: nonArchived.filter(client => client.docsNeeded / client.docsReceived < 40).length
+    complete: nonArchived.filter(client => {
+      let percent = (client.docsReceived / client.docsNeeded) * 100;
+      return complete(percent);
+    }).length,
+    starting: nonArchived.filter(client => {
+      let percent = (client.docsReceived / client.docsNeeded) * 100;
+      return starting(percent);
+    }).length,
+    inProgress: nonArchived.filter(client => {
+      let percent = (client.docsReceived / client.docsNeeded) * 100;
+      return inProgress(percent);
+    }).length
   }
 }

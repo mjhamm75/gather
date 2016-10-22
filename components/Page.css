@@ -7,3 +7,20 @@
   justify-content: flex-end;
   padding: 10px 0;
 }
+.arrowDown {
+  composes: arrowDown from './common.css';
+  margin-left: 5px;
+}
+.grouping {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+}
+.user {
+  composes: grouping;
+  margin-right: 25px;
+}
+.settings {
+  composes: grouping;
+  margin-right: 5px;
+}

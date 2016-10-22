@@ -13,11 +13,13 @@ export default ({
 }) => (
   <div className={s.page}>
     <div className={s.toolbar}>
-      <div>
+      <div className={s.user}>
         <UserInfo />
+        <div className={s.arrowDown}/>
       </div>
-      <div>
+      <div className={s.settings}>
         <Settings />
+        <div className={s.arrowDown}/>
       </div>
     </div>
     <ClientManagement

@@ -8,7 +8,7 @@ const ClientList = ({
   clickBell,
   clickRow
 }) => {
-  let clientDom = clientList.map((client, index) => <Client key={index} client={client} clickBell={clickBell} clickRow={clickRow}/>);
+  let clientDom = clientList.map((client, index) => <Client key={index} client={client} />);
   return (
     <div className={s.table}>
       <div className={s.header}>

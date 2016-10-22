@@ -1,12 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Main from './components/Main';
+import Page from './components/Page';
+import ClientManagement from './components/ClientManagement';
 
-import { Router, Route, browserHistory } from 'react-router';
+import { IndexRoute, Router, Route, browserHistory } from 'react-router';
 
 render((
   <Router history={browserHistory}>
-    <Router path="/" component={Main}></Router>
+    <Router path="/" component={Page}>
+      <IndexRoute component={ClientManagement}/>
+    </Router>
   </Router>
 ), document.getElementById('app'));

@@ -28,7 +28,7 @@ class Client extends Component {
     } = this.props;
 
     return (
-      <div className={s.row} onClick={clickRow.bind(this, client)}>
+      <div className={s.row}>
         <div className={s.cell}>{client.name}</div>
         <div className={s.cell}>{formatDate(client.dateOpened)}</div>
         <div className={s.cell}>
@@ -43,7 +43,6 @@ class Client extends Component {
         <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>
         <div className={s.cellRightAlign}>
           <Bell
-            clickBell={clickBell.bind(this, client)}
           />
         </div>
         <div className={s.cellRight}>

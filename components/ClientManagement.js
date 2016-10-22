@@ -7,6 +7,35 @@ import SendReminderToAll from './SendReminderToAll';
 
 import s from './ClientManagement.css';
 
+let clients =   [{
+    name: 'Jason Hamm',
+    dateOpened: '2016-10-09T03:02:14+00:00',
+    docsNeeded: 42,
+    docsReceived: 16,
+    phone: '801-222-3333',
+    email: 'jason@hamm.com',
+    dateLastReminder: '2016-10-09T03:02:14+00:00'
+  },
+  {
+    name: 'Neely Hamm',
+    dateOpened: '2016-10-09T03:02:14+00:00',
+    docsNeeded: 25,
+    docsReceived: 25,
+    phone: '801-222-3333',
+    email: 'jason@hamm.com',
+    dateLastReminder: '2016-10-09T03:02:14+00:00'
+  },
+  {
+    name: 'Aliece Hamm',
+    dateOpened: '2016-10-09T03:02:14+00:00',
+    docsNeeded: 25,
+    docsReceived: 16,
+    phone: '801-222-3333',
+    email: 'jason@hamm.com',
+    dateLastReminder: '2016-10-09T03:02:14+00:00'
+  }
+]
+
 const ClientManagement = ({
   clientList,
   clickBell,
@@ -25,9 +54,7 @@ const ClientManagement = ({
         <SendReminderToAll />
       </div>
       <ClientList
-        clientList={clientList}
-        clickBell={clickBell}
-        clickRow={clickRow}
+        clientList={clients}
         />
     </div>
   </div>

@@ -7,6 +7,8 @@ import ClientSearch from './ClientSearch';
 import ClientStatus from './ClientStatus';
 import SendReminderToAll from './SendReminderToAll';
 
+import { getArchivedCount } from '../reducers';
+
 import s from './ClientManagement.css';
 
 class ClientManagement extends Component {
@@ -15,11 +17,16 @@ class ClientManagement extends Component {
   }
 
   render() {
+    let {
+      archived,
+      clients
+    } = this.props;
+
     return (
       <div className={s.clientManagementFrame}>
         <div className={s.frameBar}>
-          <div className={s.active}>Active (3)</div>
-          <div className={s.archived}>Archived (122)</div>
+          <div className={s.active}>Active ({clients.length - archived.length})</div>
+          <div className={s.archived}>Archived ({archived.length})</div>
           <div className={s.createNew}>
             <Link
               className={s.link}
@@ -43,5 +50,6 @@ class ClientManagement extends Component {
 }
 
 export default connect(state => ({
-  clients: state.clients
+  clients: state.clients,
+  archived: getArchivedCount(state)
 }))(ClientManagement);

@@ -55,3 +55,12 @@ export default (state = initialState, action) => {
 export const getArchivedCount = (clients) => {
   return clients.filter(client => client.archived === true);
 }
+
+export const getClientCounts = (clients) => {
+  let nonArchived = clients.filter(client => client.archived === false);
+  return {
+    complete: nonArchived.filter(client => client.docsNeeded / client.docsReceived === 1).length,
+    starting: nonArchived.filter(client => client.docsNeeded / client.docsReceived >= 40 && client.docsNeeded / client.docsReceived < 100).length,
+    inProgress: nonArchived.filter(client => client.docsNeeded / client.docsReceived < 40).length
+  }
+}

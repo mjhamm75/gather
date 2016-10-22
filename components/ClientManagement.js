@@ -7,7 +7,7 @@ import ClientSearch from './ClientSearch';
 import ClientStatus from './ClientStatus';
 import SendReminderToAll from './SendReminderToAll';
 
-import { getArchivedCount } from '../reducers';
+import { getArchivedCount, getClientCounts } from '../reducers';
 
 import s from './ClientManagement.css';
 
@@ -19,7 +19,8 @@ class ClientManagement extends Component {
   render() {
     let {
       archived,
-      clients
+      clients,
+      counts
     } = this.props;
 
     return (
@@ -37,7 +38,9 @@ class ClientManagement extends Component {
         <div className={s.clientManagement}>
           <div className={s.tableActionBar}>
             <ClientSearch />
-            <ClientStatus />
+            <ClientStatus
+              counts={counts}
+            />
             <SendReminderToAll />
           </div>
           <ClientList
@@ -51,5 +54,6 @@ class ClientManagement extends Component {
 
 export default connect(state => ({
   clients: state.clients,
-  archived: getArchivedCount(state)
+  archived: getArchivedCount(state),
+  counts: getClientCounts(state)
 }))(ClientManagement);

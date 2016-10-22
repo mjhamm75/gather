@@ -9,3 +9,7 @@ export default combineReducers({
 export const getArchivedCount = (store) => {
   return fromClients.getArchivedCount(store.clients);
 }
+
+export const getClientCounts = (store) => {
+  return fromClients.getClientCounts(store.clients);
+}

@@ -1,9 +1,11 @@
 import React from 'react';
 
+import s from './UserInfo.css';
+
 export default () => (
   <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-    <g id="Hamm&amp;Hamm" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="Attorney-Dashboard-Success-Message" transform="translate(-1787.000000, -142.000000)" fill="#434F5E">
+    <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g transform="translate(-1787.000000, -142.000000)" className={s.fill}>
             <g id="account" transform="translate(1787.000000, 142.000000)">
                 <g id="Group">
                     <ellipse id="Oval" cx="11.2788462" cy="5.97115385" rx="5.97115385" ry="5.97115385"></ellipse>

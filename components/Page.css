@@ -9,6 +9,7 @@
 }
 .arrowDown {
   composes: arrowDown from './common.css';
+  border-top-color: #434F5E;
   margin-left: 5px;
 }
 .grouping {
@@ -20,7 +21,22 @@
   composes: grouping;
   margin-right: 25px;
 }
+.user > svg > g > g {
+  fill: #434F5E;
+}
+.user:hover > svg > g > g {
+  fill: #333c48;
+}
+.user:hover .arrowDown {
+  border-top-color: #333c48;
+}
 .settings {
   composes: grouping;
   margin-right: 5px;
+}
+.settings:hover > svg > g > g {
+  fill: #333c48;
+}
+.settings:hover .arrowDown {
+  border-top-color: #333c48;
 }

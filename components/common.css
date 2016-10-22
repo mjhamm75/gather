@@ -30,3 +30,14 @@
   border-right: 5px solid transparent;
   border-top: 5px solid;
 }
+.button {
+  border: 1px solid #B0BEC9;
+  box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.33);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 8px;
+}
+.link {
+  font-size: 18px;
+  color: #4A90E2;
+}

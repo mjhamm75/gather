@@ -1,0 +1,64 @@
+.background {
+  background: white;
+  border: #F7F8FB solid 20px;
+}
+.border {
+  border: white solid 20px;
+}
+.toolbar {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.title {
+  margin-right: auto;
+  font-size: 24px;
+}
+.create {
+  composes: button from './common.css';
+  background: #4ECA8C;
+  border: 1px solid #3AA56F;
+  color: white;
+}
+.cancel {
+  composes: link from './common.css';
+  margin-right: 15px;
+}
+.accountInfo {
+  display: flex;
+}
+.clientInfo {
+  background: #F7F8FB;
+  padding: 15px;
+}
+.notes {
+  background: #F7F8FB;
+  padding: 15px;
+}
+.row {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.clientInfo {
+  display: flex;
+  margin-right: 2.5%;
+  width: 50%;
+}
+.notes {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.groupTitle {
+  color: #C3D2DE;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.textArea {
+  border: none;
+  height: 30%;
+}

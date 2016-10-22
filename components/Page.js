@@ -13,6 +13,7 @@ export default ({
 }) => (
   <div className={s.page}>
     <div className={s.toolbar}>
+      <div style={{color: 'white', marginRight: 'auto'}}>Our Logo</div>
       <div className={s.user}>
         <UserInfo />
         <div className={s.arrowDown}/>

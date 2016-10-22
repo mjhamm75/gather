@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import ClientList from './ClientList';
 import ClientSearch from './ClientSearch';
@@ -36,28 +36,28 @@ let clients =   [{
   }
 ]
 
-const ClientManagement = ({
-  clientList,
-  clickBell,
-  clickRow
-}) => (
-  <div className={s.clientManagementFrame}>
-    <div className={s.frameBar}>
-      <div className={s.active}>Active (3)</div>
-      <div className={s.archived}>Archived (122)</div>
-      <div className={s.link}>+ Create New Account</div>
-    </div>
-    <div className={s.clientManagement}>
-      <div className={s.tableActionBar}>
-        <ClientSearch />
-        <ClientStatus />
-        <SendReminderToAll />
+class ClientManagement extends Component {
+  render() {
+    return (
+      <div className={s.clientManagementFrame}>
+        <div className={s.frameBar}>
+          <div className={s.active}>Active (3)</div>
+          <div className={s.archived}>Archived (122)</div>
+          <div className={s.link}>+ Create New Account</div>
+        </div>
+        <div className={s.clientManagement}>
+          <div className={s.tableActionBar}>
+            <ClientSearch />
+            <ClientStatus />
+            <SendReminderToAll />
+          </div>
+          <ClientList
+            clientList={clients}
+            />
+        </div>
       </div>
-      <ClientList
-        clientList={clients}
-        />
-    </div>
-  </div>
-)
+    )
+  }
+}
 
 export default ClientManagement;

@@ -40,3 +40,6 @@
 .settings:hover .arrowDown {
   border-top-color: #333c48;
 }
+.content {
+  background: white;
+}

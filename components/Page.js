@@ -25,7 +25,9 @@ class Page extends Component {
             <div className={s.arrowDown}/>
           </div>
         </div>
-        {this.props.children}
+        <div className={s.content}>
+          {this.props.children}
+        </div>
       </div>
     )
   }

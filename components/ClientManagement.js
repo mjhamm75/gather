@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import ClientList from './ClientList';
 import ClientSearch from './ClientSearch';
@@ -6,35 +7,6 @@ import ClientStatus from './ClientStatus';
 import SendReminderToAll from './SendReminderToAll';
 
 import s from './ClientManagement.css';
-
-let clients =   [{
-    name: 'Jason Hamm',
-    dateOpened: '2016-10-09T03:02:14+00:00',
-    docsNeeded: 42,
-    docsReceived: 16,
-    phone: '801-222-3333',
-    email: 'jason@hamm.com',
-    dateLastReminder: '2016-10-09T03:02:14+00:00'
-  },
-  {
-    name: 'Neely Hamm',
-    dateOpened: '2016-10-09T03:02:14+00:00',
-    docsNeeded: 25,
-    docsReceived: 25,
-    phone: '801-222-3333',
-    email: 'jason@hamm.com',
-    dateLastReminder: '2016-10-09T03:02:14+00:00'
-  },
-  {
-    name: 'Aliece Hamm',
-    dateOpened: '2016-10-09T03:02:14+00:00',
-    docsNeeded: 25,
-    docsReceived: 16,
-    phone: '801-222-3333',
-    email: 'jason@hamm.com',
-    dateLastReminder: '2016-10-09T03:02:14+00:00'
-  }
-]
 
 class ClientManagement extends Component {
   render() {
@@ -52,7 +24,7 @@ class ClientManagement extends Component {
             <SendReminderToAll />
           </div>
           <ClientList
-            clientList={clients}
+            clientList={this.props.clients}
             />
         </div>
       </div>
@@ -60,4 +32,9 @@ class ClientManagement extends Component {
   }
 }
 
-export default ClientManagement;
+function mapStateToProps(state) {
+  return {
+    clients: state.clients
+  }
+}
+export default connect(mapStateToProps)(ClientManagement);

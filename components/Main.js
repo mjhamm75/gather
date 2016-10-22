@@ -44,12 +44,22 @@ class App extends Component {
   clickRow(client) {
     console.log(`row ${client.name}`)
   }
+
+  clickSettings() {
+    console.log(`Settings clicked`);
+  }
+
+  clickUser() {
+    console.log(`User clicked`);
+  }
   render() {
     return (
-      <Page 
+      <Page
         clientList={clientList}
         clickBell={this.clickBell.bind(this)}
         clickRow={this.clickRow.bind(this)}
+        clickSettings={this.clickSettings.bind(this)}
+        clickUser={this.clickUser.bind(this)}
       />
     )
   }

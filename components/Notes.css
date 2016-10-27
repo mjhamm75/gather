@@ -1,0 +1,9 @@
+.notes {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.textArea {
+  border: none;
+  height: 30%;
+}

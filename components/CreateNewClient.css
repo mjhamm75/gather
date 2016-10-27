@@ -27,10 +27,6 @@
 .accountInfo {
   display: flex;
 }
-.clientInfo {
-  background: #F7F8FB;
-  padding: 15px;
-}
 .notes {
   background: #F7F8FB;
   padding: 15px;
@@ -48,17 +44,8 @@
   margin-right: 2.5%;
   width: 50%;
 }
-.notes {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
 .groupTitle {
   color: #C3D2DE;
   font-size: 14px;
   text-transform: uppercase;
-}
-.textArea {
-  border: none;
-  height: 30%;
 }

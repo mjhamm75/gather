@@ -1,0 +1,11 @@
+.clientInfo {
+  background: #F7F8FB;
+  display: flex;
+  padding: 15px;
+  flex-basis: 50%;
+}
+.column {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+}

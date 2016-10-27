@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+import ClientInfo from './ClientInfo';
+import Notes from './Notes';
+
 import s from './CreateNewClient.css';
 
 class CreateNewClient extends Component {
@@ -17,46 +20,8 @@ class CreateNewClient extends Component {
             <div className={s.create}>Create</div>
           </div>
           <div className={s.accountInfo}>
-            <div className={s.clientInfo}>
-              <div className={s.column}>
-                <label>Name</label>
-                <input />
-                <label>Street Address</label>
-                <input />
-                <input />
-                <label>City</label>
-                <input />
-                <label>State</label>
-                <input />
-                <label>Zip</label>
-                <input />
-                <label>Phone Number</label>
-                <input />
-                <label>Email Address</label>
-                <input />
-              </div>
-              <div className={s.column}>
-                <label>Spouse</label>
-                <input />
-                <label>Street Address</label>
-                <input />
-                <input />
-                <label>City</label>
-                <input />
-                <label>State</label>
-                <input />
-                <label>Zip</label>
-                <input />
-                <label>Phone Number</label>
-                <input />
-                <label>Email Address</label>
-                <input />
-              </div>
-            </div>
-            <div className={s.notes}>
-              <label>Notes</label>
-              <textarea className={s.textArea}/>
-            </div>
+            <ClientInfo />
+            <Notes />
           </div>
           <div className={s.expenseInfo}>
 

@@ -9,3 +9,13 @@
   flex-basis: 50%;
   flex-direction: column;
 }
+.group {
+  display: flex;
+  flex-direction: column;
+}
+.cityGroup {
+  display: flex;
+}
+input {
+  height: 34px;
+}

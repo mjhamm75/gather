@@ -37,7 +37,7 @@ class Client extends Component {
             needed={client.docsNeeded}
           />
         </div>
-        <div className={s.cell}>{`${client.docsNeeded} of ${client.docsReceived}`}</div>
+        <div className={s.cell}>{`${client.docsReceived} of ${client.docsNeeded}`}</div>
         <div className={s.cell}>{client.phone}</div>
         <div className={s.cell}>{client.email}</div>
         <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>

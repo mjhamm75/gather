@@ -1,20 +1,25 @@
 .clientInfo {
   background: #F7F8FB;
   display: flex;
-  padding: 15px;
   flex-basis: 50%;
 }
 .column {
   display: flex;
   flex-basis: 50%;
   flex-direction: column;
+  padding: 15px;
 }
 .group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 .cityGroup {
   display: flex;
+  justify-content: space-between;
+}
+.cityGroup > div {
+  width: 30%;
 }
 input {
   height: 34px;

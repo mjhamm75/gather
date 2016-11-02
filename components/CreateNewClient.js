@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import ClientInfo from './ClientInfo';
 import Notes from './Notes';
+import Expenses from './Expenses';
 
 import s from './CreateNewClient.css';
 
@@ -24,7 +25,7 @@ class CreateNewClient extends Component {
             <Notes />
           </div>
           <div className={s.expenseInfo}>
-
+            <Expenses />
           </div>
         </div>
       </div>

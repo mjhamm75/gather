@@ -1,6 +1,13 @@
 import React from 'react';
+import Select from 'react-select';
+
+import states from '../utils/states';
 
 import s from './ClientInfo.css';
+
+const log = state => {
+  console.log(state);
+}
 
 export default () => (
   <div className={s.clientInfo}>
@@ -21,7 +28,10 @@ export default () => (
         </div>
         <div className={s.group}>
           <label>State</label>
-          <input />
+          <Select
+            options={states}
+            onChange={log}
+          />
         </div>
         <div className={s.group}>
           <label>Zip</label>
@@ -54,7 +64,10 @@ export default () => (
         </div>
         <div className={s.group}>
           <label>State</label>
-          <input />
+          <Select
+            options={states}
+            onChange={log}
+          />
         </div>
         <div className={s.group}>
           <label>Zip</label>

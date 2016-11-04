@@ -1,0 +1,10 @@
+.expense {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 14px;
+}
+.group {
+  display: flex;
+  align-items: center;
+}

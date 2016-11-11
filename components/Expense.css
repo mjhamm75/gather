@@ -9,12 +9,26 @@
 }
 .group {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
-  padding: 7px 0;
+  padding: 7px 4px;
 }
 .group:hover {
   background: #E7ECEE;
 }
+.group:hover > .delete {
+  display: block;
+}
 .check {
   margin-right: 5px;
+}
+.delete {
+  display: none;
+  margin-left: auto;
+}
+.delete > svg > g {
+  stroke: #D0011B;
+}
+.delete:hover > svg > g {
+  stroke: #940013;
 }

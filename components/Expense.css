@@ -1,10 +1,20 @@
 .expense {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  min-width: 250px;
   margin: 14px;
 }
+.grouping {
+  margin-top: 7px;
+}
 .group {
-  display: flex;
   align-items: center;
+  display: flex;
+  padding: 7px 0;
+}
+.group:hover {
+  background: #E7ECEE;
+}
+.check {
+  margin-right: 5px;
 }

@@ -11,13 +11,13 @@ export default () => {
       <div className={s.expenseGroup}>
         <Expense
           title="Monthly Expenses"
-          />
+        />
         <Expense
           title="Income"
-          />
+        />
         <Expense
           title="Taxes"
-          />
+        />
       </div>
     </div>
   )

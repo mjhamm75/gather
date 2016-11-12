@@ -3,12 +3,13 @@
   border: #F7F8FB solid 20px;
 }
 .border {
-  border: white solid 20px;
+  border: white solid 15px;
 }
 .toolbar {
   align-items: center;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 15px;
 }
 .title {
   margin-right: auto;
@@ -23,6 +24,7 @@
 .cancel {
   composes: link from './common.css';
   margin-right: 15px;
+  text-decoration: none;
 }
 .accountInfo {
   display: flex;

@@ -35,9 +35,12 @@
   box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.33);
   border-radius: 4px;
   cursor: pointer;
-  padding: 10px 8px;
+  padding: 10px 15px;
 }
 .link {
   font-size: 18px;
   color: #4A90E2;
+}
+.link:hover {
+  color: #356aa7;
 }

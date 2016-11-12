@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
 import '!style!css!sass!./styles/react-select.scss';
+import '!style!css!sass!./styles/reset.scss';
 
 import Page from './components/Page';
 

@@ -2,12 +2,20 @@
   background: #F7F8FB;
   margin-top: 15px;
 }
-.title {
-  color: #C3D2DE;
-  font-size: 14px;
-  padding: 18px 0 8px 18px;
-  text-transform: uppercase;
-}
 .expenseGroup {
   display: flex;
+  flex-wrap: wrap;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 18px 0 8px 18px;
+}
+.title {
+  color: #C3D2DE;
+  text-transform: uppercase;
+}
+.add {
+  padding-right: 18px;
 }

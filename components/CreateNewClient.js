@@ -14,9 +14,8 @@ class CreateNewClient extends Component {
         <div className={s.border}>
           <div className={s.toolbar}>
             <div className={s.title}>New Account</div>
-            <div
-              className={s.cancel}>
-              <Link to="/">Cancel</Link>
+            <div>
+              <Link className={s.cancel} to="/">Cancel</Link>
             </div>
             <div className={s.create}>Create</div>
           </div>

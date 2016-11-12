@@ -44,3 +44,7 @@
 .link:hover {
   color: #356aa7;
 }
+.title {
+  color: #C3D2DE;
+  text-transform: uppercase;
+}

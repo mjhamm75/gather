@@ -1,7 +1,10 @@
 .clientInfo {
   background: #F7F8FB;
   display: flex;
-  flex-basis: 50%;
+  flex-direction: column;
+}
+.columns {
+  display: flex;
 }
 .column {
   display: flex;
@@ -23,4 +26,11 @@
 }
 input {
   height: 34px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  composes: title from './common.css';
 }

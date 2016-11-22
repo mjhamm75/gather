@@ -16,8 +16,24 @@ import {
 import s from './ClientManagement.css';
 
 class ClientManagement extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchValue: null
+    }
+  }
   createNewAccount() {
     console.log('create new account');
+  }
+
+  filterClients(searchValue, client) {
+    return searchValue === null ? true : client.name.indexOf(searchValue) > -1;
+  }
+
+  updateSearchValue(value) {
+    this.setState({
+      searchValue: value.searchValue
+    })
   }
 
   render() {
@@ -42,14 +58,16 @@ class ClientManagement extends Component {
         </div>
         <div className={s.clientManagement}>
           <div className={s.tableActionBar}>
-            <ClientSearch />
+            <ClientSearch
+              updateSearchValue={this.updateSearchValue.bind(this)}
+            />
             <ClientStatus
               counts={counts}
             />
             <SendReminderToAll />
           </div>
           <ClientList
-            clientList={activeClients}
+            clientList={activeClients.filter(this.filterClients.bind(this, this.state.searchValue))}
             />
         </div>
       </div>

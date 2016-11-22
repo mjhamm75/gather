@@ -27,7 +27,7 @@ class ClientManagement extends Component {
   }
 
   filterClients(searchValue, client) {
-    return searchValue === null ? true : client.name.indexOf(searchValue) > -1;
+    return searchValue === null ? true : client.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
   }
 
   updateSearchValue(value) {

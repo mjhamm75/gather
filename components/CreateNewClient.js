@@ -28,7 +28,10 @@ class CreateNewClient extends Component {
               form={form}
               updateForm={updateForm}
             />
-            <Notes />
+            <Notes
+              notes={form.notes}
+              updateForm={updateForm}
+            />
           </div>
           <div className={s.expenseInfo}>
             <Expenses />

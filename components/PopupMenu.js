@@ -17,7 +17,7 @@ function clickArchive(event) {
 
 const popupStyle = {
   position: 'fixed',
-  right: '24px',
+  right: '90px',
   transform: 'translateY(-23px)'
 }
 

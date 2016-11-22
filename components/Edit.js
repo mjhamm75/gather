@@ -1,7 +1,16 @@
 import React from 'react';
 
+import s from './Edit.css';
+
 export default () => (
-  <svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+  <svg
+    className={s.edit}
+    height="20px"
+    version="1.1"
+    viewBox="0 0 19 20"
+    width="19px"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink">
       <title>edit icon</title>
       <desc>Created with Sketch.</desc>
       <defs></defs>

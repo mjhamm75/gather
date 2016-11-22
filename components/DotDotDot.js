@@ -1,8 +1,11 @@
 import React from 'react';
 
+import s from './DotDotDot.css';
+
 export default ({clickDot}) => {
   return (
     <svg
+      className={s.dotdotdot}
       height="24px"
       onClick={clickDot}
       version="1.1"

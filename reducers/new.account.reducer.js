@@ -1,4 +1,5 @@
 export const UPDATE_NEW_ACCOUNT_FORM_ELEMENT = 'UPDATE_NEW_ACCOUNT_FORM_ELEMENT';
+export const CLEAR_NEW_ACCOUNT_FORM = 'CLEAR_NEW_ACCOUNT_FORM';
 
 const initialState = {
   primaryName: "",
@@ -29,6 +30,8 @@ export default (state = initialState, action) => {
         ...state,
         [action.key]: action.value,
       };
+    case CLEAR_NEW_ACCOUNT_FORM:
+      return initialState;
     default:
       return state;
   }

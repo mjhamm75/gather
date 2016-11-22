@@ -8,10 +8,10 @@
   color: #9B9B9B;
 }
 .popupMenuItem:hover g {
-  fill: green;
+  fill: rgb(42, 85, 136);
 }
 .popupMenuItem:hover span {
-  color: green;
+  color: rgb(42, 85, 136);
 }
 .text {
   margin: 0 6px 0 4px;

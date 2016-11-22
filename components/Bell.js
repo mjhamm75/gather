@@ -1,11 +1,14 @@
 import React from 'react';
 
+import s from './Bell.css';
+
 export default ({
   clickBell,
   color = '#4990E2'
 }) => {
   return (
     <svg
+      className={s.bell}
       height="23px"
       onClick={clickBell}
       viewBox="0 0 23 23"

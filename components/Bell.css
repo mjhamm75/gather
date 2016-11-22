@@ -1,0 +1,6 @@
+.bell {
+  cursor: pointer;
+}
+.bell:hover > g > g {
+  fill: rgb(42, 85, 136);
+}

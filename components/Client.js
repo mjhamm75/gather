@@ -42,8 +42,7 @@ class Client extends Component {
         <div className={s.cell}>{client.email}</div>
         <div className={s.cell}>{formatDate(client.dateLastReminder)}</div>
         <div className={s.cellRightAlign}>
-          <Bell
-          />
+          { this.state.showPopup ? null : <Bell/> }
         </div>
         <div className={s.cellRight}>
           <DotDotDot clickDot={() => this.clickDot()} />

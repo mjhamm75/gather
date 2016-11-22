@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
 
-import clients, * as fromClients from './clientReducer';
+import clients, * as fromClients from './client.reducer';
+import newAccount from './new.account.reducer';
 
 export default combineReducers({
-  clients
+  clients,
+  newAccount
 });
 
 export const getArchivedCount = (store) => {

@@ -1,4 +1,4 @@
-import UPDATE_CLIENTS from '../reducers/clientReducer';
+import UPDATE_CLIENTS from '../reducers/client.reducer';
 
 export getClients = () => {
   return {

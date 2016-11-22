@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 
 import ClientInfo from './ClientInfo';
 import Notes from './Notes';
 import Expenses from './Expenses';
 
+import { updateNewAccountFormElement } from '../actions/new.account.actions';
+
 import s from './CreateNewClient.css';
 
 class CreateNewClient extends Component {
   render() {
+    let { form, updateForm } = this.props;
     return (
       <div className={s.background}>
         <div className={s.border}>
@@ -20,7 +24,10 @@ class CreateNewClient extends Component {
             <div className={s.create}>Create</div>
           </div>
           <div className={s.accountInfo}>
-            <ClientInfo />
+            <ClientInfo
+              form={form}
+              updateForm={updateForm}
+            />
             <Notes />
           </div>
           <div className={s.expenseInfo}>
@@ -32,4 +39,8 @@ class CreateNewClient extends Component {
   }
 }
 
-export default CreateNewClient;
+export default connect(state => ({
+  form: state.newAccount
+}), dispatch => ({
+  updateForm: (key, value) => dispatch(updateNewAccountFormElement(key, value))
+}))(CreateNewClient);

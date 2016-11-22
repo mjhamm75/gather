@@ -1,6 +1,7 @@
 .clientInfo {
   background: #F7F8FB;
   display: flex;
+  flex-basis: 50%;
   flex-direction: column;
 }
 .columns {
@@ -30,6 +31,9 @@ input {
 .header {
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
+  padding: 18px;
+  padding-bottom: 0;
 }
 .title {
   composes: title from './common.css';

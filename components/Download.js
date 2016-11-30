@@ -5,7 +5,7 @@ import s from './Download.css';
 
 export default () => {
   return (
-    <div>
+    <div className={s.download}>
       <AddPlus />
     </div>
   )

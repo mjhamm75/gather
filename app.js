@@ -11,6 +11,7 @@ import Page from './components/Page';
 
 import ClientManagement from './components/ClientManagement';
 import CreateNewClient from './components/CreateNewClient';
+import Account from './components/Account';
 
 import reducer from './reducers'
 
@@ -21,6 +22,7 @@ render((
   <Provider store={store}>
     <Router history={browserHistory}>
       <Router path="/" component={Page}>
+        <Route path="/account" component={Account} />
         <Route path="create" component={CreateNewClient}/>
         <IndexRoute component={ClientManagement}/>
       </Router>

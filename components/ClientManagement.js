@@ -49,12 +49,10 @@ class ClientManagement extends Component {
         <div className={s.frameBar}>
           <div className={s.active}>Active ({clients.length - archived.length})</div>
           <div className={s.archived}>Archived ({archived.length})</div>
-          <div className={s.createNew}>
-            <Link
-              className={s.link}
-              to={`/create`}
-            >+ Create New Account</Link>
-          </div>
+          <Link
+            className={s.createNew}
+            to={`/create`}
+          >+ Create New Account</Link>
         </div>
         <div className={s.clientManagement}>
           <div className={s.tableActionBar}>

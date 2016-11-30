@@ -1,7 +1,16 @@
 import React from 'react';
 
 export default () => (
-  <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+  <svg
+    height="48px"
+    style={{
+      cursor: 'pointer'
+    }}
+    version="1.1"
+    viewBox="0 0 48 48"
+    width="48px"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink">
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g transform="translate(-199.000000, -553.000000)" fill="#B8B9BA">
               <g transform="translate(156.000000, 498.000000)">

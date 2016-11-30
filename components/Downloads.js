@@ -13,7 +13,6 @@ export default () => {
       <Download />
       <Download />
       <Download />
-      
     </div>
   )
 }

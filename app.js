@@ -22,7 +22,7 @@ render((
   <Provider store={store}>
     <Router history={browserHistory}>
       <Router path="/" component={Page}>
-        <Route path="/account" component={Account} />
+        <Route path="account" component={Account} />
         <Route path="create" component={CreateNewClient}/>
         <IndexRoute component={ClientManagement}/>
       </Router>

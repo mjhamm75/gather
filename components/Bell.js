@@ -4,13 +4,19 @@ import s from './Bell.css';
 
 export default ({
   clickBell,
-  color = '#4990E2'
+  color = '#4990E2',
+  medium,
 }) => {
+  let style = medium ? {
+    height: '40px',
+    width: '40px'
+  } : null;
   return (
     <svg
       className={s.bell}
       height="23px"
       onClick={clickBell}
+      style={style}
       viewBox="0 0 23 23"
       version="1.1"
       width="23px"

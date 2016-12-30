@@ -5,6 +5,7 @@
 .createAccount {
   composes: verticalFlex;
   margin: 0 auto;
+  margin-top: 50px;
   width: 600px;
 }
 @media(max-width: 700px) {
@@ -14,7 +15,18 @@
 }
 .email {
   composes: verticalFlex;
+  margin-bottom: 40px;
 }
 .password {
   composes: verticalFlex;
+}
+.title {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.label {
+  margin-bottom: 5px;
+}
+.passwordInput {
+  margin-bottom: 8px;
 }

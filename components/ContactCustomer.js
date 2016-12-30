@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SkyLight from 'react-skylight';
 import {ModalContainer, ModalDialog} from 'react-modal-dialog';
 import Bell from './Bell';
 

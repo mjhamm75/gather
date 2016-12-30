@@ -5,8 +5,12 @@ import {
 import { connect } from 'react-redux';
 
 import ClientInfo from './ClientInfo';
+import Check from './Check';
 import Notes from './Notes';
 import Expenses from './Expenses';
+import CreateAccount from './CreateAccount';
+import { Tabs, Tab } from './Tabs';
+import TabIcon from './TabIcon';
 
 import {
   clearNewAccountForm,
@@ -28,33 +32,72 @@ class CreateNewClient extends Component {
       updateForm
     } = this.props;
     return (
-      <div className={s.background}>
-        <div className={s.border}>
-          <div className={s.toolbar}>
-            <div className={s.title}>New Account</div>
-            <div>
-              <a
-                className={s.cancel}
-                onClick={this.cancel.bind(this)}
-              >Cancel</a>
+      <Tabs
+        onChange={tab => {}}
+      >
+        <Tab
+          key="first"
+          label={
+            <TabIcon
+              count="1"
+              isComplete={true}
+              label="Create Account"
+            />
+          }
+        >
+          <CreateAccount />
+        </Tab>
+        <Tab
+          key="second"
+          label={
+            <TabIcon
+              count="2"
+              isComplete={false}
+              label="Personal Information"
+            />
+          }
+        >
+          <div className={s.background}>
+            <div className={s.border}>
+              <div className={s.toolbar}>
+                <div className={s.title}>New Account</div>
+                <div>
+                  <a
+                    className={s.cancel}
+                    onClick={this.cancel.bind(this)}
+                  >Cancel</a>
+                </div>
+                <div className={s.create}>Create</div>
+              </div>
+              <div className={s.accountInfo}>
+                <ClientInfo
+                  form={form}
+                  updateForm={updateForm}
+                />
+                <Notes
+                  notes={form.notes}
+                  updateForm={updateForm}
+                />
+              </div>
+              <div className={s.expenseInfo}>
+                <Expenses />
+              </div>
             </div>
-            <div className={s.create}>Create</div>
           </div>
-          <div className={s.accountInfo}>
-            <ClientInfo
-              form={form}
-              updateForm={updateForm}
+        </Tab>
+        <Tab
+          key="third"
+          label={
+            <TabIcon
+              count="3"
+              isComplete={false}
+              label="Documents"
             />
-            <Notes
-              notes={form.notes}
-              updateForm={updateForm}
-            />
-          </div>
-          <div className={s.expenseInfo}>
-            <Expenses />
-          </div>
-        </div>
-      </div>
+          }
+        >
+          <div>3rd Tab</div>
+        </Tab>
+      </Tabs>
     )
   }
 }

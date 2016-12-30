@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import clients, * as fromClients from './client.reducer';
+import clients, * as fromClients from './clients.reducer';
 import newAccount from './new.account.reducer';
 
 export default combineReducers({

@@ -1,0 +1,20 @@
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+}
+.createAccount {
+  composes: verticalFlex;
+  margin: 0 auto;
+  width: 600px;
+}
+@media(max-width: 700px) {
+  .createAccount {
+    width: 100%;
+  }
+}
+.email {
+  composes: verticalFlex;
+}
+.password {
+  composes: verticalFlex;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import s from './PopupMenu.css';
 
@@ -21,7 +22,7 @@ const popupStyle = {
   transform: 'translateY(-23px)'
 }
 
-export default ({}) => (
+const PopupMenu = ({}) => (
   <div className={s.popupMenu} style={popupStyle}>
     <div className={s.popupMenuItem} onClick={e => clickEdit(e)}>
       <Edit /><span className={s.text}>Edit</span>
@@ -31,3 +32,9 @@ export default ({}) => (
     </div>
   </div>
 );
+
+export default connect(state => {
+  return {};
+}, dispatch => {
+  return {};
+})(PopupMenu);

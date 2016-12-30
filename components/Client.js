@@ -46,7 +46,12 @@ class Client extends Component {
         </div>
         <div className={s.cellRight}>
           <DotDotDot clickDot={() => this.clickDot()} />
-          { this.state.showPopup ? <PopupMenu /> : null }
+          { this.state.showPopup
+            ? <PopupMenu
+                client={client}
+              />
+            : null
+          }
         </div>
       </div>
     )

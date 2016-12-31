@@ -6,7 +6,7 @@
   composes: verticalFlex;
   margin: 0 auto;
   margin-top: 50px;
-  width: 600px;
+  width: 400px;
 }
 @media(max-width: 700px) {
   .createAccount {
@@ -22,11 +22,24 @@
 }
 .title {
   font-size: 18px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .label {
   margin-bottom: 5px;
 }
+.input {
+  font-size: 14px;
+  padding-left: 20px;
+  width: 400px
+}
 .passwordInput {
+  composes: input;
   margin-bottom: 8px;
+}
+.passwordInput::placeholder {
+  font-size: 12px;
+  font-style: italic;
+}
+.input {
+
 }

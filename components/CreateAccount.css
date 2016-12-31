@@ -32,6 +32,11 @@
   padding-left: 20px;
   width: 400px
 }
+@media(max-width: 430px) {
+  .input {
+    width: 100%;
+  }
+}
 .passwordInput {
   composes: input;
   margin-bottom: 8px;
@@ -47,4 +52,9 @@
   color: white;
   right: 25px;
   position: absolute;
+}
+@media(max-width: 430px) {
+  .button {
+    position: initial;
+  }
 }

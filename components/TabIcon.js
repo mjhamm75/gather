@@ -7,7 +7,7 @@ export default ({ count, isComplete, label }) => {
   return (
     <div className={s.tabIcon}>
       <span className={s.icon}>
-          {isComplete ? <Check /> : count}
+          {isComplete ? <Check addPadding /> : count}
       </span>
       <span>{label}</span>
     </div>

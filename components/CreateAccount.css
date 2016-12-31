@@ -40,6 +40,11 @@
   font-size: 12px;
   font-style: italic;
 }
-.input {
-
+.button {
+  composes: button from './common.css';
+  composes: blue from './common.css';
+  bottom: 25px;
+  color: white;
+  right: 25px;
+  position: absolute;
 }

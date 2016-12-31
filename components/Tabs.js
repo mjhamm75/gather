@@ -27,7 +27,7 @@ export class Tabs extends Component {
 				<div>
 					<nav>
 						<ul className={s.tabs}>
-							{this.props.children.map((tab) => (
+							{this.props.children.map(tab => (
 									<li
 											tabIndex="0"
 											key={tab.key}
@@ -37,6 +37,11 @@ export class Tabs extends Component {
 									>{tab.props.label}</li>
 								)
 							)}
+						</ul>
+						<ul className={s.tabsMobile}>
+							{this.props.children.map(tab => (
+								<li>{tab.props.label}</li>
+							))}
 						</ul>
 					</nav>
 					<div className={s.tabBox}>

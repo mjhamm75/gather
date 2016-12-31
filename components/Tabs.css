@@ -1,7 +1,22 @@
-.tabs {
+.tabsMobile {
 	display: flex;
+}
+@media(min-width: 430px) {
+	.tabsMobile {
+		display: none;
+	}
+
+}
+.tabs {
+	display: none;
 	list-style: none;
 }
+@media(min-width: 430px) {
+	.tabs {
+		display: flex;
+	}
+}
+
 .tab {
 	align-items: center;
 	border: solid #e3e2e2;

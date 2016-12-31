@@ -40,7 +40,7 @@ class CreateNewClient extends Component {
           label={
             <TabIcon
               count="1"
-              isComplete={true}
+              isComplete={false}
               label="Create Account"
             />
           }
@@ -53,7 +53,7 @@ class CreateNewClient extends Component {
             <TabIcon
               count="2"
               isComplete={false}
-              label="Personal Information"
+              label="Personal Info"
             />
           }
         >

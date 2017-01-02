@@ -1,5 +1,10 @@
 .tabsMobile {
+	align-items: center;
+	background: #4ECA8C;
 	display: flex;
+	height: 65px;
+	list-style: none;
+	padding: 0 20px;
 }
 @media(min-width: 430px) {
 	.tabsMobile {
@@ -54,10 +59,39 @@
 
 .tabBox {
 	display: inline-block;
-	margin-bottom: 10px;
 	width: 100%;
 }
 
 .innerTabBox {
-	margin: 20px;
+	margin: 30px;
+}
+.tabIcon {
+  align-items: center;
+  display: flex;
+}
+.iconBase {
+	border-radius: 30px;
+	color: rgb(140, 141, 142);
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 7px;
+	text-align: center;
+	width: 30px;
+}
+.icon {
+	composes: iconBase;
+	background-color: white;
+}
+.grow {
+	flex-grow: 2;
+}
+.mobileIcon {
+	composes: iconBase;
+	background: #4ECA8C;
+	border: #ACDFC8 solid 1px;
+}
+.title {
+	color: white;
+	font-weight: 100;
 }

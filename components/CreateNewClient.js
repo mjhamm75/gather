@@ -36,26 +36,18 @@ class CreateNewClient extends Component {
         onChange={tab => {}}
       >
         <Tab
+          count="1"
+          isComplete={false}
           key="first"
-          label={
-            <TabIcon
-              count="1"
-              isComplete={false}
-              label="Create Account"
-            />
-          }
+          label="Create Account"
         >
           <CreateAccount />
         </Tab>
         <Tab
+          count="2"
+          isComplete={false}
           key="second"
-          label={
-            <TabIcon
-              count="2"
-              isComplete={false}
-              label="Personal Info"
-            />
-          }
+          label="Personal Info"
         >
           <div className={s.background}>
             <div className={s.border}>
@@ -86,14 +78,10 @@ class CreateNewClient extends Component {
           </div>
         </Tab>
         <Tab
+          count="3"
+          isComplete={false}
           key="third"
-          label={
-            <TabIcon
-              count="3"
-              isComplete={false}
-              label="Documents"
-            />
-          }
+          label="Documents"
         >
           <div>3rd Tab</div>
         </Tab>

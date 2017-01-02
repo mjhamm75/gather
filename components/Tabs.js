@@ -22,37 +22,69 @@ export class Tabs extends Component {
 		}
 	}
 
+	createTabLabel(tab) {
+		return (
+			<li
+					tabIndex="0"
+					key={tab.key}
+					className={tab.key === this.state.tab ? s.active : s.inactive}
+					onClick={this.handleTabChange.bind(this, tab.key)}
+					onKeyDown={this.onKeyDown.bind(this, tab.key)}
+			>
+				<div className={s.tabIcon}>
+					<span className={s.icon}>
+							{tab.props.isComplete ? <Check addPadding /> : tab.props.count}
+					</span>
+					<span>{tab.props.label}</span>
+				</div>
+			</li>
+		)
+	}
+
+	createMobileTabLabel(tab, i) {
+		if(tab.key === this.state.tab) {
+			return (
+				<li className={s.grow}>
+					<div className={s.tabIcon}>
+						<span className={s.icon}>
+								{tab.props.isComplete ? <Check addPadding /> : tab.props.count}
+						</span>
+						<span className={s.title}>{tab.props.label}</span>
+					</div>
+				</li>
+			);
+		} else {
+			return (
+				<li>
+					<span className={s.mobileIcon}>{tab.props.count}</span>
+				</li>
+			);
+		}
+	}
+
+	createTabs(tab) {
+		return (
+			<li key={tab.key}>
+				{tab.key == this.state.tab ? tab.props.children : null}
+			</li>
+		)
+	}
+
 	render() {
 		return (
 				<div>
 					<nav>
 						<ul className={s.tabs}>
-							{this.props.children.map(tab => (
-									<li
-											tabIndex="0"
-											key={tab.key}
-											className={tab.key == this.state.tab ? s.active : s.inactive}
-											onClick={this.handleTabChange.bind(this, tab.key)}
-									    onKeyDown={this.onKeyDown.bind(this, tab.key)}
-									>{tab.props.label}</li>
-								)
-							)}
+							{this.props.children.map(tab => this.createTabLabel(tab))}
 						</ul>
 						<ul className={s.tabsMobile}>
-							{this.props.children.map(tab => (
-								<li>{tab.props.label}</li>
-							))}
+							{this.props.children.map((tab, i) => this.createMobileTabLabel(tab, i))}
 						</ul>
 					</nav>
 					<div className={s.tabBox}>
-						<div className={s.innerTabBox}>
-							{this.props.children.map((tab) => (
-									<div key={tab.key} style={{display: tab.key == this.state.tab ? null : "none"}}>
-										{tab.key == this.state.tab || tab.props.preload ? tab.props.children : null}
-									</div>
-									)
-							)}
-						</div>
+						<ul className={s.innerTabBox}>
+							{this.props.children.map(tab => this.createTabs(tab))}
+						</ul>
 					</div>
 				</div>
 		)

@@ -48,8 +48,12 @@
 .button {
   composes: button from './common.css';
   composes: blue from './common.css';
+  align-items: center;
   bottom: 25px;
   color: white;
+  display: flex;
+  height: 35px;
+  justify-content: center;
   right: 25px;
   position: absolute;
 }

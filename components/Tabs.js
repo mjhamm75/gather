@@ -41,10 +41,10 @@ export class Tabs extends Component {
 		)
 	}
 
-	createMobileTabLabel(tab, i) {
+	createMobileTabLabel(tab) {
 		if(tab.key === this.state.tab) {
 			return (
-				<li className={s.grow}>
+				<li key={tab.key} className={s.grow}>
 					<div className={s.tabIcon}>
 						<span className={s.icon}>
 								{tab.props.isComplete ? <Check addPadding /> : tab.props.count}
@@ -55,7 +55,7 @@ export class Tabs extends Component {
 			);
 		} else {
 			return (
-				<li>
+				<li key={tab.key}>
 					<span className={s.mobileIcon}>{tab.props.count}</span>
 				</li>
 			);
@@ -78,7 +78,7 @@ export class Tabs extends Component {
 							{this.props.children.map(tab => this.createTabLabel(tab))}
 						</ul>
 						<ul className={s.tabsMobile}>
-							{this.props.children.map((tab, i) => this.createMobileTabLabel(tab, i))}
+							{this.props.children.map(tab => this.createMobileTabLabel(tab))}
 						</ul>
 					</nav>
 					<div className={s.tabBox}>

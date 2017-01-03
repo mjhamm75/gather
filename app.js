@@ -4,17 +4,12 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
+import reducer from './reducers'
+
 import '!style!css!sass!./styles/reset.scss';
 import '!style!css!sass!./styles/react-select.scss';
 
-import Page from './components/Page';
-
-import ClientManagement from './components/ClientManagement';
 import CreateNewClient from './components/CreateNewClient';
-import Account from './components/Account';
-
-import reducer from './reducers'
-
 
 let store = createStore(reducer);
 

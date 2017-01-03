@@ -1,8 +1,7 @@
 .clientInfo {
-  background: #F7F8FB;
   display: flex;
-  flex-basis: 50%;
   flex-direction: column;
+  max-width: 800px;
 }
 .columns {
   display: flex;
@@ -32,9 +31,18 @@ input {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  padding: 18px;
-  padding-bottom: 0;
+  margin: 0 15px;
 }
 .title {
   composes: title from './common.css';
+}
+.link {
+  composes: link from './common.css';
+  font-size: 16px;
+}
+.label {
+  margin-bottom: 4px;
+}
+.input {
+  margin-bottom: 10px;
 }

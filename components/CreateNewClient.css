@@ -1,34 +1,3 @@
-.background {
-  background: white;
-  border: #F7F8FB solid 20px;
-}
-.border {
-  border: white solid 15px;
-}
-.toolbar {
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 15px;
-}
-.title {
-  margin-right: auto;
-  font-size: 24px;
-}
-.create {
-  composes: button from './common.css';
-  background: #4ECA8C;
-  border: 1px solid #3AA56F;
-  color: white;
-}
-.cancel {
-  composes: link from './common.css';
-  margin-right: 15px;
-  text-decoration: none;
-}
-.accountInfo {
-  display: flex;
-}
 .notes {
   background: #F7F8FB;
   padding: 15px;

@@ -4,12 +4,10 @@ import {
 } from 'react-router';
 import { connect } from 'react-redux';
 
-import ClientInfo from './ClientInfo';
-import Notes from './Notes';
-import Expenses from './Expenses';
+import { Tabs, Tab } from './Tabs';
 import CreateAccount from './CreateAccount';
 import BasicInfo from './BasicInfo';
-import { Tabs, Tab } from './Tabs';
+import Downloads from './Downloads';
 
 import {
   clearNewAccountForm,
@@ -58,7 +56,9 @@ class CreateNewClient extends Component {
           key="third"
           label="Documents"
         >
-          <div>3rd Tab</div>
+          <div>
+            <Downloads />
+          </div>
         </Tab>
       </Tabs>
     )

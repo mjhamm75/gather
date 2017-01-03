@@ -56,9 +56,7 @@ class CreateNewClient extends Component {
           key="third"
           label="Documents"
         >
-          <div>
-            <Downloads />
-          </div>
+          <Downloads />
         </Tab>
       </Tabs>
     )

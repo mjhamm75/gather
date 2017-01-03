@@ -1,5 +1,22 @@
 .downloads {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.items {
   background: white;
   display: flex;
+  flex-wrap: wrap;
   padding: 5px 5px;
+}
+.reminder {
+  align-items: center;
+  display: flex;
+  composes: link from './common.css';
+}
+.reminderText {
+  margin-right: 3px;
+}
+.content {
+  max-width: 800px;
 }

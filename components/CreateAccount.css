@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
 }
+.content {
+  max-width: 400px;
+}
 .createAccount {
   composes: verticalFlex;
-  margin: 0 auto;
-  width: 400px;
+  align-items: center;
 }
 @media(max-width: 430px) {
   .createAccount {

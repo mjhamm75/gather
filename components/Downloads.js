@@ -6,13 +6,17 @@ import s from './Downloads.css';
 export default () => {
   return (
     <div className={s.downloads}>
-      <Download />
-      <Download />
-      <Download />
-      <Download />
-      <Download />
-      <Download />
-      <Download />
+      <div className={s.content}>
+        <div className={s.items}>
+          <Download />
+          <Download />
+          <Download />
+          <Download />
+          <Download />
+          <Download />
+          <Download />
+        </div>
+      </div>
     </div>
   )
 }

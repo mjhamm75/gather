@@ -55,7 +55,10 @@ export class Tabs extends Component {
 			);
 		} else {
 			return (
-				<li key={tab.key}>
+				<li
+					key={tab.key}
+					onClick={this.handleTabChange.bind(this, tab.key)}
+				>
 					<span className={s.mobileIcon}>{tab.props.count}</span>
 				</li>
 			);

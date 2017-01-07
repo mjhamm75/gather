@@ -158,6 +158,7 @@ export default class ClientInfo extends Component {
             </div>
           </div>
         </div>
+        <a className={s.button}>Continue</a>
       </div>
     )
   }

@@ -9,7 +9,7 @@ export default () => {
     <div className={s.downloads}>
       <div className={s.content}>
         <span>
-            <span>Please provide the following documents.  You may come back later and add documents.  We will send a [daily] reminder by [text]</span>
+            <span className={s.text}>Please provide the following documents.  You may come back later and add documents.  We will send a [daily] reminder by [text]</span>
             <span className={s.reminder}>
               <span className={s.reminderText}>Change reminder settings.</span>
               <Bell />

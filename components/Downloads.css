@@ -10,9 +10,10 @@
   padding: 5px 5px;
 }
 .reminder {
+  composes: link from './common.css';
   align-items: center;
   display: flex;
-  composes: link from './common.css';
+  font-size: 16px;
 }
 .reminderText {
   margin-right: 3px;
@@ -27,4 +28,7 @@
   font-weight: 600;
   margin-top: 25px;
   margin-bottom: 10px;
+}
+.text {
+  line-height: 1.3;
 }

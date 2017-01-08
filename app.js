@@ -16,7 +16,7 @@ let store = createStore(reducer);
 render((
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={CreateNewClient} />
+      <Route path="/create" component={CreateNewClient} />
     </Router>
   </Provider>
 ), document.getElementById('app'));

@@ -2,20 +2,29 @@
   display: flex;
   flex-direction: column;
   max-width: 800px;
+  width: 100%;
 }
 .columns {
+  align-items: center;
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
-@media(max-width: 600px) {
+@media(max-width: 660px) {
   .columns {
     flex-direction: column;
+  }
+  .column {
+    padding: 0;
+    padding-top: 15px;
   }
 }
 .column {
   display: flex;
-  flex-basis: 50%;
   flex-direction: column;
+  max-width: 500px;
   padding: 15px;
+  width: 100%;
 }
 .group {
   display: flex;
@@ -61,7 +70,7 @@ input {
   height: 35px;
   justify-content: center;
   right: 25px;
-  position: relative;
+  position: absolute;
 }
 @media(max-width: 430px) {
   .button {

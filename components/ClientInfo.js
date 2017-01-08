@@ -15,7 +15,7 @@ export default class ClientInfo extends Component {
     let { form, updateForm } = this.props;
     let { showAddResponsibleParty } = this.state;
     let addResposiblePartyStyle = {
-      visibility: showAddResponsibleParty ? 'visible' : 'hidden'
+      display: showAddResponsibleParty ? 'block' : 'none'
     }
     return (
       <div className={s.clientInfo}>

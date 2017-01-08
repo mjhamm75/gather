@@ -10,6 +10,7 @@ import '!style!css!sass!./styles/reset.scss';
 import '!style!css!sass!./styles/react-select.scss';
 
 import CreateNewClient from './components/CreateNewClient';
+import ClientManagement from './components/ClientManagement';
 
 let store = createStore(reducer);
 
@@ -17,6 +18,7 @@ render((
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/create" component={CreateNewClient} />
+      <Route path="/clients" component={ClientManagement} />
     </Router>
   </Provider>
 ), document.getElementById('app'));
